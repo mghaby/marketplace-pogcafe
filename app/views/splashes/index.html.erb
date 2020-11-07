@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Splashes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @splashes.each do |splash| %>
+      <tr>
+        <td><%= link_to 'Show', splash %></td>
+        <td><%= link_to 'Edit', edit_splash_path(splash) %></td>
+        <td><%= link_to 'Destroy', splash, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Splash', new_splash_path %>
