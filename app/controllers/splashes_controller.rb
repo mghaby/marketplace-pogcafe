@@ -1,5 +1,11 @@
 class SplashesController < ApplicationController
   before_action :set_splash, only: [:show, :edit, :update, :destroy]
+  def splash
+    if user_signed_in?
+      redirect_to "/listings/"
+    end
+  end
+
 
   # GET /splashes
   # GET /splashes.json
