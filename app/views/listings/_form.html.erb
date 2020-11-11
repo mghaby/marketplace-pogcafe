@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, min: 1 %>
   </div>
 
   <%= form.hidden_field :user_id, value: current_user.id %>        
