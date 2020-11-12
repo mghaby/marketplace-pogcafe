@@ -18,6 +18,7 @@
         <td><%= listing.title %></td>
         <td><%= listing.description %></td>
         <td><%= listing.price %></td>
+        <td><%= image_tag listing.picture %></td>
         <td><%= link_to 'Show', listing %></td>
         <% if current_user.id == listing.user_id %>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
