@@ -1,14 +1,10 @@
-<style>
-
-</style>
-
-<nav style="display: inline-block; border: 2px black solid;">
-<a><%= link_to "Home", root_path %></a>
-<a><%= link_to "Create Account", new_user_registration_path %></a>
-<a><%= link_to "Sign In", new_user_session_path %></a>
+<nav style="display: inline-block; border: 2px white solid;">
+<a><%= link_to "Home", root_path, {:style=>'color: black;'} %></a>
+<a><%= link_to "Create Account", new_user_registration_path, {:style=>'color: black;'} %></a>
+<a><%= link_to "Sign In", new_user_session_path, {:style=>'color: black;'} %></a>
 </nav>
 
-<h1>Welcome to PogCafe!</h1>
-<%= image_tag("icon.png") %>
+<h1 style="text-align: center; color: black;">Welcome to PogCafe!</h1>
+<%= image_tag("icon.png", alt: 'icon image', :style => 'display: block; margin-left: auto; margin-right: auto; width: 50%;') %>
 <h2>Here at PogCafe we aim to make barista quality coffee available to you in the comfort of your own home</h2><br></br>
 <h2>Sign up using the links above or Sign in to see listings available or create your own!</h2>
