@@ -19,7 +19,7 @@
         <td><%= listing.title %></td>
         <td><%= listing.description %></td>
         <td><%= listing.price %></td>
-        <td><%= image_tag listing.picture if listing.picture.attached? %></td>
+        <td><%= image_tag listing.picture, :style => 'max-width: 450px; max-height: 170px;' if listing.picture.attached? %></td>
         <td><%= link_to 'Show', listing, {:style=>'color: white;'} %></td>
         <% if current_user.id == listing.user_id %>
         <td><%= link_to 'Edit', edit_listing_path(listing), {:style=>'color: white;'} %></td>
