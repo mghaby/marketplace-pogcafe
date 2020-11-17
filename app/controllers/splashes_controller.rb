@@ -1,5 +1,7 @@
 class SplashesController < ApplicationController
   before_action :set_splash, only: [:show, :edit, :update, :destroy]
+  
+  # loop to make sure you're logged in to get past splash
   def splash
     if user_signed_in?
       redirect_to "/listings/"
