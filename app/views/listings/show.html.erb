@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%# code for displaying creator of listing %>
+<p>
+  <strong>User:</strong>
+  <%= @listing.user.email %>
+</p>
+
 <p>
   <strong>Title:</strong>
   <%= @listing.title %>
@@ -22,5 +28,5 @@
 
 <% if current_user.id == @listing.user_id %>
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
 <% end %>
+<%= link_to 'Back', listings_path %>
